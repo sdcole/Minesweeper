@@ -2,9 +2,22 @@ package util;
 
 import java.util.Scanner;
 
+/**
+ * Game class that controls the game loop.
+ * @author saebastion cole
+ *
+ */
 public class Game {
+	/**
+	 * Board object that holds all of the location information and methods.
+	 */
 	private Board gameBoard = new Board();
+	
+	/**
+	 * difficulty of the game.
+	 */
 	private int difficulty;
+	
 	/**
 	 * Default constructor that calls the game start method.
 	 */

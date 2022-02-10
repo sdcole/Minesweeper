@@ -1,15 +1,39 @@
+
+
 package util;
 
 
 import java.util.Random;
 
+/**
+ * Board object class that contains all methods for the board functions.
+ * @author saebastion cole
+ */
 public class Board {
 	
+	/**
+	 * Character used to the mine throughout the board.
+	 */
 	final String MINE_CHARACTER = "x";
 	
+	/**
+	 * 2d array of the minesweeper board.
+	 */
 	private String[][] gameBoard;
+	
+	/**
+	 * Total number of rows
+	 */
 	private int rows;
+	
+	/**
+	 * Total number of columns.
+	 */
 	private int cols;
+	
+	/**
+	 * Total number of mines.
+	 */
 	private int mines;
 
 	
@@ -34,7 +58,7 @@ public class Board {
 	
 	/**
 	 * Takes the difficulty and sets the board size accordingly.
-	 * @param difficulty
+	 * @param difficulty The passed variable that sets the difficulty.
 	 */
 	public void setDifficulty(int difficulty) {
 		if (difficulty == 1) {
@@ -166,8 +190,8 @@ public class Board {
     /**
      * Checks if the location is a mine.
      * @param row - The row of the location to check.
-     * @param col - The col of the location to check.
-     * @return true if the location holds a mine.
+     * @param col - The column of the location to check.
+     * @return True if the location holds a mine.
      */
     public boolean checkLocation(int row, int col) {
     	if (gameBoard[row][col] == MINE_CHARACTER) {
@@ -297,7 +321,7 @@ public class Board {
     /**
      * Checks if the space is hidden and returns accordingly.
      * @param row The row coordinate to check.
-     * @param col The col coordinate to check.
+     * @param col The column coordinate to check.
      * @return True if the space still is hidden.
      */
     public boolean nChecked(int row, int col) {
